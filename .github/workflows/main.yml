@@ -24,8 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.head_ref }}
       - uses: actions/setup-node@v2
       - name: Install markdownlint binary
         run: |
@@ -33,4 +31,4 @@ jobs:
           echo "$(yarn global bin)" >> $GITHUB_PATH
       - name: Run markdownlint
         run: |
-          markdownlint **/*.md --ignore **/init.md
+          markdownlint **/*.md --ignore README.md
