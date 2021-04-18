@@ -83,17 +83,21 @@
 
     즉, 중복되는 코드를 줄여서 사용할 수 있다.
 
-  - 하지만, 내가 원치 않은 상황에서 update를 하게 되는 경우도 생길 수 있다. 
+  - 하지만, 내가 원치 않은 상황에서 update를 하게 되는 경우도 생길 수 있다.
 
     - 이를 방지해주려고 useEffect에서는 두 개의 파라미터를 사용한다.
 
-  - 첫 번째로는 rendering이 될 때 어떻게 동작할 것인지, 두 번째로는 dependency을 설정해준다.
+  - 첫 번째로는 rendering이 될 때 어떻게 동작할 것인지,
+
+    - 두 번째로는 dependency을 설정해준다.
 
   - 위에서 코드는 [count]로 dependency를 설정해주었다.
 
-    - 이를 통해서 count가 update될 경우에만 첫번째 파라미터가 실행이 될 것이다.
+    이를 통해서 count가 update될 경우에만 첫번째 파라미터가 실행이 될 것이다.
 
-  - 반대로 []로 dependency를 주게 된다면 count가 update가 되더라도 첫번째 파라미터가 실행이 되지 않는다.
+  - 반대로 []로 dependency를 주게 된다면 count가 update가 되더라도
+
+    첫번째 파라미터가 실행이 되지 않는다.
 
 - ### Context Hook ( useContext )
 
@@ -105,8 +109,8 @@
     const value = useContext(MyContext);
     ```
 
-    context의 현재값은 Hook을 호출하는 컴포넌트 
-    ​	가장 가까이에 있는 MyContext.Provide에 의 해 결정된다.
+    context의 현재값은 Hook을 호출하는 컴포넌트
+    가장 가까이에 있는 MyContext.Provide에 의 해 결정된다.
 
   - context값이 변경되면 항상 리렌더링 된다.
 
@@ -144,11 +148,11 @@
     dispatch({type: 'DEC'}) // Decrement
     ```
 
-    다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우나 
-    ​					새로운 State가 이전 State에 의존적인 경우 주로 사용한다.
+    다수의 하윗값을 포함하는 복잡한 정적 로직을 만드는 경우나
+    ​새로운 State가 이전 State에 의존적인 경우 주로 사용한다.
 
   - 자세한 업데이트를 트리거 하는 컴포넌트의 성능을 최적화 가능.
-    [콜백 대신 dispatch](https://ko.reactjs.org/docs/hooks-faq.html#how-to-avoid-passing-callbacks-down)를 전달 할 수 있기 때문이다.
+    콜백 대신 dispatch를 전달 할 수 있기 때문이다.
 
 그 외에도 useRef, useMemo 등 여러개가 더 있다.
 
@@ -274,9 +278,11 @@
 ------------------------------------------------------------------------------------------------------------------------------
 < 해보고 싶어요 >
 
-Custom Hook 부분은 정말 매력적이다. 
+Custom Hook 부분은 정말 매력적이다.
 
-다음엔 [npmjs](https://www.npmjs.com/package/react-hooks-lib#useFetchInitialUrl-initialOptions-onMount)에서 제공하는 기능들을 참고해서 자체 제작해보고 싶다.
+[npmjs](https://www.npmjs.com/package/react-hooks-lib#useFetchInitialUrl-initialOptions-onMount)
+
+위에서 제공하는 기능들을 참고해서 자체 제작해보고 싶다.
 
 연습지에 React-Select를 이용해서 카테고리별 필터링 해주는 기능을 만들어보고 싶다.
 
