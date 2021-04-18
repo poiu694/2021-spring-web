@@ -1,9 +1,8 @@
 # [DSC-Web] React Study [2021-04-18]
+
 ------------------------------------------------------------------------------------------------------------------------------
 
-## React Hook 
-
-
+## React Hook
 
 ## React Hook 특징
 
@@ -11,8 +10,6 @@
 - **Class Component** -> **Functional Component**로 바꾸어 준다.
 - [High Order Component Pattern](https://ko.reactjs.org/docs/higher-order-components.html)을 사용할 필요가 없이 로직을 공유 가능하게 한다.
 - **Custom Hook**을 만들 수 있어 유용한 기능을 담긴 Hook을 사용자간의 공유가 가능하다.
-
-
 
 ## React Hook  종류
 
@@ -22,7 +19,7 @@
 
   - 기본형은 다음과 같다.
 
-    ```
+    ```react
     import {useState} from "react";
     
     const [value, setValue] = useState(0);
@@ -34,7 +31,7 @@
 
   - useState 예시
 
-    ```
+    ```react
     import React, { useState } from "react";
     
     const Example = () =>{
@@ -51,19 +48,17 @@
     }
     ```
 
-
-
 - ### Effect Hook ( useEffect )
 
   - 데이터를 가져오거나, DOM을 직접 조작하는 **“side effects”**를 수행한다.
 
-  - Class형식에서 사용하던 
+  - Class형식에서 사용하던
     **componentDidMount, componentDidUpdate, componentWillUnmout**
     를 하나로 통합하여 사용한다.
 
   - useEffect 예시
 
-  - ```
+  - ```react
     import React, { useState, useEffect } from "react";
     
     const Example = () =>{
@@ -96,15 +91,13 @@
 
   - 반대로 []로 dependency를 주게 된다면 count가 update가 되더라도 첫번째 파라미터가 실행이 되지 않는다.
 
-
-
 - ### Context Hook ( useContext )
 
   - createContext를 반환 받아 그 context의 현재값을 사용합니다.
 
   - 기본형은 다음과 같다.
 
-  - ```
+  - ```react
     const value = useContext(MyContext);
     ```
 
@@ -112,15 +105,13 @@
 
   - context값이 변경되면 항상 리렌더링 되는데, 이를 해결하기 위해 [메모이제이션](https://github.com/facebook/react/issues/15156#issuecomment-474590693)을 사용해도 된다.
 
-
-
 - **Reducer Hook ( useReducer )**
 
   - useState의 대체함수.
 
   - 기본형은 다음과 같다.
 
-  - ```
+  - ```react
     import React, {useReducer} from "react";
     
     const reducer = (state, action) =>{
@@ -141,7 +132,7 @@
 
   - dispatch는 action을 해주는 함수이며, 사용은 다음과 같이 한다.
 
-  - ```
+  - ```react
     dispatch({type: 'INC'}); // Increment
     dispatch({type: 'DEC'}) // Decrement
     ```
@@ -151,11 +142,9 @@
   - 자세한 업데이트를 트리거 하는 컴포넌트의 성능을 최적화 가능.
     [콜백 대신 dispatch](https://ko.reactjs.org/docs/hooks-faq.html#how-to-avoid-passing-callbacks-down)를 전달 할 수 있기 때문이다.
 
+그 외에도 useRef, useMemo 등 여러개가 더 있다.
 
-
- 그 외에도 useRef, useMemo 등 여러개가 더 있다.
-
----------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 
 ## Custom Hook 제작
 
@@ -167,9 +156,9 @@
 
   - fetch를 사용할 때 현재는 then으로 구현했지만, async/await를 공부하고 바꿀 예정이다.
 
-  - ###### 코드블록
+  - 코드블록
 
-  ```
+  ```react
   import React, {useState, useEffect} from "react";
   
   const UseFetch = (initialURL) =>{
@@ -207,8 +196,6 @@
   export default UseFetch;
   ```
 
-
-
 - ### UseLocalStorage
 
   - LocalStorage에 데이터를 저장하거나 가져올 때 사용한다.
@@ -222,7 +209,7 @@
 
   - 코드블록
 
-    ```
+    ```react
     const useLocalStorage = (key, initialState) => {
       const [state, setState] = useState(
         () => JSON.parse(window.localStorage.getItem(key)) || initialState
@@ -236,11 +223,7 @@
     }
     ```
 
-
-
-
-
----------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
 
 ## Route
 
@@ -250,7 +233,7 @@
 
 - 기본형태는 다음과 같다.
 
-- ```
+- ```react
   import React from "react";
   import { Route } from "react-router-dom";
   import { Home, About } from "pages";
@@ -278,10 +261,7 @@
 
 - Route 경로에 특정 값을 넣는 방법으로는 params와 query를 사용하는 2가지 방법이 있다.
 
-
-
-----------
-
+------------------------------------------------------------------------------------------------------------------------------
 < 해보고 싶어요 >
 
 Custom Hook 부분은 정말 매력적이다. 다음엔 [npmjs](https://www.npmjs.com/package/react-hooks-lib#useFetchInitialUrl-initialOptions-onMount)에서 제공하는 기능들을 참고해서 자체 제작해보고 싶다.
