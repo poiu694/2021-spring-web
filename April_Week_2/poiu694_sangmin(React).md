@@ -8,7 +8,7 @@
 
 - React Hook은 **props, state, context, refs, lifecycle**에 관한 직관적인 API를 제공해준다고 한다.
 - **Class Component** -> **Functional Component**로 바꾸어 준다.
-- [High Order Component Pattern](https://ko.reactjs.org/docs/higher-order-components.html)을 사용할 필요가 없이 로직을 공유 가능하게 한다.
+- [High Order Component Pattern](https://url.kr/rg4itml)을 사용할 필요가 없이 로직을 공유 가능하게 한다.
 - **Custom Hook**을 만들 수 있어 유용한 기능을 담긴 Hook을 사용자간의 공유가 가능하다.
 
 ## React Hook  종류
@@ -215,7 +215,7 @@
   - json파일을 임시로 만들어서 데이터를 저장하고 있었다.
 
     - json파일에 직접 Update하는 방법을 찾다가
-      [StackOverflow](https://stackoverflow.com/questions/53449406/write-to-a-text-or-json-file-in-react-with-node/53449617)를 읽어보고 Node JS를 이용하는게 낫다고 생각했다.
+      [StackOverflow](https://url.kr/gyenlo)를 읽어보고 Node JS를 이용하는게 낫다고 생각했다.
 
   - 대신 대체로 localStorage에 저장하자고 생각했다.
 
