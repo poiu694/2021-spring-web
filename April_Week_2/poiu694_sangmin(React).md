@@ -114,7 +114,7 @@
 
   - context값이 변경되면 항상 리렌더링 된다.
 
-    - 이를 해결하기 위해 [메모이제이션](https://github.com/facebook/react/issues/15156#issuecomment-474590693)을 사용해도 된다.
+    - 해결 : [메모이제이션](https://github.com/facebook/react/issues/15156#issuecomment-474590693)
 
 - **Reducer Hook ( useReducer )**
 
