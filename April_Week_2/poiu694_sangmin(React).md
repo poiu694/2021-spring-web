@@ -8,7 +8,7 @@
 
 - React Hook은 **props, state, context, refs, lifecycle**에 관한 직관적인 API를 제공해준다고 한다.
 - **Class Component** -> **Functional Component**로 바꾸어 준다.
-- [High Order Component Pattern](https://url.kr/rg4itml)을 사용할 필요가 없이 로직을 공유 가능하게 한다.
+- [High Order Component Pattern](https://url.kr/rg4itml)을 사용안하고 로직을 공유한다.
 - **Custom Hook**을 만들 수 있어 유용한 기능을 담긴 Hook을 사용자간의 공유가 가능하다.
 
 ## React Hook  종류
