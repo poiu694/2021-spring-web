@@ -152,7 +152,7 @@
     ​새로운 State가 이전 State에 의존적인 경우 주로 사용한다.
 
   - 자세한 업데이트를 트리거 하는 컴포넌트의 성능을 최적화 가능.
-    [콜백 대신 dispatch](https://ko.reactjs.org/docs/hooks-faq.html#how-to-avoid-passing-callbacks-down)를 전달 할 수 있기 때문이다.
+    콜백 대신 dispatch를 전달 할 수 있기 때문이다.
 
 그 외에도 useRef, useMemo 등 여러개가 더 있다.
 
