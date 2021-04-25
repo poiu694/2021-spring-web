@@ -392,7 +392,9 @@ JS -> React로 바꾸기만 하면 되는데 생각보다 어려웠다. 아직 R
 
   크게 달라질 부분이 없다.
 
-- setState 부분이 Component 함수에 접근할 수 있어야 하므로 OverReact의 render 함수를 trigger해주는 형태로 만들면 된다.
+- setState 부분이 Component 함수에 접근할 수 있어야 한다.
+
+- OverReact의 render 함수를 trigger해주는 형태로 만들면 된다.
 
 - useState가 여러개 호출되는 경우가 많기에 callId를 사용해 줄 것이다.
 
